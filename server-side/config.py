@@ -1,0 +1,17 @@
+class Config(object):
+    DEBUG = False
+    TESTING = False
+
+
+class DevelopmentConfig(Config):
+    DEBUG = True
+    SQLALCHEMY_DATABASE_URI = "sqlite:///database.db"
+    SECRET_KEY = "6b2141f0c04cd59b92749b1f052a7a53df796735e9c123cd20e5aeb3abaf2fba04a5b556f2b640d12f819c42f8070298b46d49151562a4d9f2f7540fa9b85879"
+    SECURITY_PASSWORD_SALT = "90383042910f10ba5bb80711049ac2e19eff7e8ca89219961f1363d499357235"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    WTF_CSRF_ENABLED = False
+    SECURITY_TOKEN_AUTHENTICATION_HEADER = "Authentication-Token"
+    CACHE_TYPE = "RedisCache"
+    CACHE_REDIS_HOST = "localhost"
+    CACHE_REDIS_PORT = 6379
+    CACHE_REDIS_DB = 0
